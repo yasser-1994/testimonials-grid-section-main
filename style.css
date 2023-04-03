@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+
+/* ## Colors */
+
+/* ### Primary */
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* ### Neutral */
+:root {
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1190px;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--Light-gray);
+}
+
+.cont-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 25px 25px;
+}
+
+.cont-box .box {
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cont-box .box .name-person{
+  font-size: 18px;
+}
+
+.cont-box .box h1 {
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.cont-box .box h2 {
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.cont-box .box p {
+  font-size: 15px;
+}
+
+/* ------------------------------------------------------- */
+.cont-box .box .flex-img-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cont-box .box .flex-img-name .image {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+.cont-box .box .flex-img-name .image img {
+  height: 100%;
+  width: 100%;
+}
+
+.cont-box .box .flex-img-name .name .name-person {
+  font-weight: 600;
+}
+
+.cont-box .box .flex-img-name .name .Verified {
+  font-size: 16px;
+}
+
+.cont-box .box .flex-img-name {
+  display: flex;
+  align-items: center;
+}
+
+.cont-box .box .flex-img-name .image {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+
+/* --------------------------------------------------------  */
+.cont-box .daniel {
+  background-color: var(--Moderate-violet);
+  grid-area: 1 / 1 / 2 / 3;
+  position: relative;
+}
+
+.cont-box .daniel h1 {
+  position: relative;
+  z-index: 5;
+}
+
+.cont-box .daniel .flex-img-name {
+  position: relative;
+  z-index: 5;
+}
+
+.cont-box .daniel .logo-svg {
+  position: absolute;
+  top: 12px;
+  right: 16%;
+  z-index: 1;
+}
+
+.cont-box .jonathan {
+  background-color: var(--Very-dark-grayish-blue);
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.cont-box .Kira {
+  background-color: var(--White);
+  grid-area: 1 / 4 / 4 / 5;
+}
+
+.cont-box .jeanette {
+  background-color: var(--White);
+  grid-area: 2 / 1 / 4 / 2;
+}
+
+.cont-box .patrick {
+  background-color: var(--Very-dark-blackish-blue);
+  grid-area: 2 / 2 / 4 / 4;
+}
+
+/* -------------------------------------------------- */
+.cont-box .Kira h2,
+.cont-box .jeanette h2 {
+  color: hsl(217, 19%, 35%);
+}
+
+.cont-box .Kira .Verified,
+.cont-box .jeanette .Verified {
+  color: hsl(217, 19%, 35%);
+  opacity: 50%;
+  font-weight: 500;
+}
+
+.cont-box .Kira p,
+.cont-box .jeanette p {
+  color: hsl(217, 19%, 35%);
+  opacity: 70%;
+}
+
+.cont-box .daniel h1,
+.cont-box .daniel .name-person,
+.cont-box .jonathan .name-person,
+.cont-box .jonathan h2,
+.cont-box .patrick .name-person,
+.cont-box .patrick h2 {
+  color: var(--White);
+}
+
+.cont-box .daniel p,
+.cont-box .patrick p,
+.cont-box .jonathan p {
+  color: var(--Light-grayish-blue);
+  opacity: 70%;
+}
+
+.cont-box .daniel .Verified,
+.cont-box .patrick .Verified,
+.cont-box .jonathan .Verified {
+  color: var(--Light-grayish-blue);
+  opacity: 50%;
+  font-weight: 500;
+}
+
+/* ----------------------------------------- */
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* --------------------------------------------- */
+@media (max-width: 425px) {
+  .container {
+    width: 350px;
+    margin: 20px 0;
+  }
+
+  .cont-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .cont-box .daniel .logo-svg {
+    position: absolute;
+    top: 4px;
+    right: 4%;
+    z-index: 1;
+  }
+
+  .cont-box .box h1 {
+    font-size: 18px;
+
+  }
+
+  .cont-box .box h2 {
+    font-size: 18px;
+
+  }
+
+  .cont-box .box p {
+    font-size: 13px;
+  }
+
+}
